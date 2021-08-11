@@ -1,0 +1,26 @@
+﻿@using Gimli.Models
+@model List<ClothViewModel>
+@{
+    ViewData["Title"] = "Clothes";
+}
+
+<div class="text-center">
+    <h1 class="display-4">CLOTHES</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+        @foreach (var cloth in Model)
+        {
+            <tr>
+                <td>@cloth.Id</td>
+                <td>@cloth.Name</td>
+                <td>@cloth.Type</td>
+            </tr>
+        }
+    </table>
+
+</div>
